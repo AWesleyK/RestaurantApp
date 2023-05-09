@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.text {
+  max-width: 50%;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+}
+
+.imageContainer {
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  padding-right: 50px;
+  user-select: none;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  user-select: none;
+}
+
+.homeSection {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.taglineContainer {
+  flex: 1;
+  justify-content: center;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.tagline {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+  user-select: none;
+}
+
+.catchphrase {
+  font-size: 1.5rem;
+  font-family: 'Ink Free', sans-serif;
+  user-select: none;
+}
+
+.restaurantImage {
+  max-width: 100%;
+  height: auto;
+}

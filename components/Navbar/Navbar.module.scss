@@ -1,0 +1,96 @@
+@import '../../styles/variables.scss';
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  background-color: $primary-color;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  height: 60px;
+  position: relative;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  z-index: 1000;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.linksContainer {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  position: absolute; 
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  margin: 0 40px;
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+  position: relative;
+
+  &::before {
+    content: attr(data-hover-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    transition: transform 0.3s;
+    transform-origin: center;
+    transform: scaleY(1);
+    pointer-events: none;
+  }
+
+  &:hover::before {
+    transform: scaleY(1.3); // Adjust the scale factor as needed
+  }
+}
+
+
+.orderButtonContainer {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.orderButton {
+  background-color: white;
+  color: $primary-color;
+  border-radius: 25px;
+  border: none;
+  padding: 8px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.logo {
+  height: 70%;
+  width: 70%
+}
+
