@@ -1,6 +1,83 @@
 @import '../../styles/variables.scss';
 
 .footer {
-  // Add footer styles
+  width: 100%;
 }
 
+.topBar {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.awkward {
+  font-weight: bold;
+}
+
+.logo {
+  height: 20px;
+  margin-left: 4px;
+}
+
+.socialMedia {
+  background-color: #333;
+  padding: 1rem 0;
+  display: flex; // Add this line
+  justify-content: center; // Add this line
+}
+
+.socialLink {
+  height: 30px; // Add this line
+  margin: 0 0.5rem; // Add this line
+}
+
+.socialMedia {
+  background-color: #333;
+  padding: 1rem 0;
+}
+
+.bottomSection {
+  display: flex;
+  justify-content: space-between;
+  background-color: #555;
+  padding: 2rem;
+}
+
+.boxesContainer {
+  display: flex;
+  position: relative;
+}
+
+.box {
+  background-color: $secondary-color;
+  width: 100px;
+  height: 100px;
+}
+
+.box:first-child {
+  position: relative;
+  z-index: 1;
+  transform: translateY(-40px);
+}
+
+.restaurantLogo {
+  height: 250px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.box:last-child {
+  position: relative;
+  z-index: 1;
+  transform: translateY(40px);
+}
+
+.contactInfo {
+  color: white;
+  font-size: 1.2rem;
+}
