@@ -1,16 +1,17 @@
 import { connectToDatabase } from '../../lib/mongodb';
 
 export default async function handler(req, res) {
+  console.log('Entering menu handler'); // Add this line
   if (req.method === 'GET') {
     try {
       const db = await connectToDatabase();
-      console.log('Connected to database'); // Add this line
-      const menuData = await db.collection('menu').find({}).toArray();
-      console.log('Fetched menu data:', menuData); // Add this line
+      console.log('Connected to database');
+      const menuData = await db.collection('Menus').find({}).toArray();
+      console.log('Fetched menu data:', menuData);
 
       return res.status(200).json({ success: true, data: menuData });
     } catch (error) {
-      console.error('Error in menu route:', error); // Add this line
+      console.error('Error in menu route:', error);
       return res.status(500).json({ success: false, message: error.message });
     }
   } else {

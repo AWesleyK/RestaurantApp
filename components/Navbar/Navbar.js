@@ -16,9 +16,17 @@ const Navbar = () => {
 
   const scrollToSection = (event, sectionId) => {
     event.preventDefault();
-    const section = document.getElementById(sectionId);
-    section.scrollIntoView({ behavior: 'smooth' });
+  
+    // Check if the user is on the home page
+    if (window.location.pathname === '/') {
+      const section = document.getElementById(sectionId);
+      section.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // Redirect the user to the home page and focus the desired section
+      window.location.href = `${window.location.origin}/#${sectionId}`;
+    }
   };
+  
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);

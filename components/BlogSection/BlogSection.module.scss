@@ -1,16 +1,72 @@
- 
- 
 .blogSection {
   min-width: 100vh;
   margin: 0;
   padding: 0;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('/images/bg.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-  
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/images/bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  flex-direction: column;
+}
+
+.carousel .slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 1); 
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.blogTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.blogDate {
+  font-size: 1rem;
+  font-weight: 300;
+  align-self:flex-end;
+  margin-bottom: 1rem;
+  margin-right: 10rem;
+  font-style: italic;
+}
+
+.blogContent {
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.blogHeading {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.carouselContainer {
+  text-align: center;
+  width: 40%;
+}
+
+.blogContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.blogHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}

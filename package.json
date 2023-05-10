@@ -13,7 +13,8 @@
         "next": "^13.3.4",
         "react": "latest",
         "react-dom": "^18.2.0",
-        "react-responsive-carousel": "^3.2.23"
+        "react-responsive-carousel": "^3.2.23",
+        "react-router-dom": "^6.11.1"
     },
     "devDependencies": {
         "@types/react": "18.2.0",
