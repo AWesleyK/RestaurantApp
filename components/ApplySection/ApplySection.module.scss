@@ -1,13 +1,73 @@
- 
- 
+@import '../../styles/variables.scss';
+
 .applySection {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('/images/bg.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  padding: 2rem;
+  background-image: url('/images/bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.applyHeading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.applyForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.nameInputGroup {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nameLabel,
+.resumeLabel {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.fNameInput,
+.lNameInput,
+.resumeInput {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.fNameInput {
+  margin-right: 2rem;
+}
+
+.namePair {
+  display: flex;
+  flex-direction: column;
+}
+
+.submitButton {
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $secondary-color;
   }
-  
+}
