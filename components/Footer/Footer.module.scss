@@ -5,7 +5,7 @@
 }
 
 .topBar {
-  background-color: black;
+  background-color: $light-grey-color;
   color: white;
   text-align: center;
   padding: 0.5rem 0;
@@ -24,13 +24,13 @@
 .socialMedia {
   background-color: #333;
   padding: 1rem 0;
-  display: flex; // Add this line
-  justify-content: center; // Add this line
+  display: flex;
+  justify-content: center;
 }
 
 .socialLink {
-  height: 30px; // Add this line
-  margin: 0 0.5rem; // Add this line
+  height: 30px;
+  margin: 0 0.5rem;
 }
 
 .socialMedia {
@@ -41,7 +41,7 @@
 .bottomSection {
   display: flex;
   justify-content: space-between;
-  background-color: #555;
+  background-color: $black-color;
   padding: 2rem;
 }
 
