@@ -1,0 +1,36 @@
+.admin-dashboard {
+    padding: 20px;
+    border-radius: 4px;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+  
+    li {
+      margin-bottom: 10px;
+    }
+  
+    a {
+      text-decoration: none;
+      font-weight: bold;
+    }
+  
+    .logout-link {
+      margin-top: 20px;
+    }
+
+    .link:hover {
+        text-decoration: underline;
+      }
+  }
+  
