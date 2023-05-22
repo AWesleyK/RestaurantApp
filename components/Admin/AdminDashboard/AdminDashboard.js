@@ -1,14 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import styles from './AdminDashboard.module.scss';
+import { AuthContext } from '../AuthProvider/AuthProvider';
+
+
 
 const AdminDashboard = () => {
+  const { setIsLoggedIn } = useContext(AuthContext);
+  const router = useRouter();
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    router.push('/admin/login');
+  };
+
   return (
     <div className={styles['admin-dashboard']}>
       <h1>Admin Dashboard</h1>
       <ul>
         <li>
-          <Link href="/menu" className={styles.link}>
+          <Link href="/admin/menu" className={styles.link}>
             Menu
           </Link>
         </li>
@@ -29,10 +41,11 @@ const AdminDashboard = () => {
         </li>
       </ul>
       <div className={styles['logout-link']}>
-        <Link href="/logout" className={styles.link}>
-          Logout
-        </Link>
-      </div>
+  <a onClick={handleLogout} className={styles.link}>
+    Logout
+  </a>
+</div>
+
     </div>
   );
 };

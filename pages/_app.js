@@ -1,6 +1,6 @@
 import '../styles/globals.scss';
 import styles from '../styles/_app.module.scss';
-import AuthProvider from '../components/AuthProvider/AuthProvider';
+import AuthProvider from '../components/Admin/AuthProvider/AuthProvider';
 
 function MyApp({ Component, pageProps }) {
   return (

@@ -4,6 +4,7 @@
     max-width: 400px;
     margin: 0 auto;
     text-align: center;
+    user-select:none;
   
     h1 {
       font-size: 24px;
@@ -27,10 +28,21 @@
   
     .logout-link {
       margin-top: 20px;
+      cursor: pointer;
     }
 
     .link:hover {
         text-decoration: underline;
       }
   }
+
+  .logout-link button {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
   

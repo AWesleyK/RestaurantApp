@@ -1,0 +1,83 @@
+// components/MenuAdmin/MenuAdmin.module.scss
+@import '../../../styles/variables.scss';
+.menuAdmin {
+    padding: 20px;
+    background-color: $primary-color;
+  
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  
+    .menuSection {
+      margin-bottom: 20px;
+  
+      h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+  
+      ul {
+        list-style-type: none;
+        padding: 0;
+  
+        li {
+          margin-bottom: 10px;
+          display: flex;
+          align-items: center;
+  
+          span {
+            flex-grow: 1;
+          }
+  
+          button {
+            margin-left: 10px;
+          }
+        }
+      }
+  
+      button {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .headers {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .tableRow {
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    margin: 2rem;
+  }
+  
+  .itemContainer {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    justify-content: right;
+  }
+  
+  .buttonsContainer {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid #ccc;
+  }
+  
+  .itemProperty {
+    margin-bottom: 5px;
+  }
+  
+  .modal {
+    /* Your existing modal styles */
+  }
+  
+  .modalContent {
+    /* Your existing modal content styles */
+  }
+  

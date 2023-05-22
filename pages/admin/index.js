@@ -1,4 +1,4 @@
-import AdminAuth from '../../components/AdminAuth/AdminAuth';
-import AdminDashboard from '../../components/AdminDashboard/AdminDashboard';
+import AdminAuth from '../../components/Admin/AdminAuth/AdminAuth';
+import AdminDashboard from '../../components/Admin/AdminDashboard/AdminDashboard';
 
 export default AdminAuth(AdminDashboard);

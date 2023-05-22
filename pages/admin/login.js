@@ -28,7 +28,7 @@ export default LoginPage;
 // pages/login.js
 import { useContext, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { AuthContext } from '../../components/AuthProvider/AuthProvider';
+import { AuthContext } from '../../components/Admin/AuthProvider/AuthProvider';
 import LoginForm from '../../components/LoginForm/LoginForm';
 import Layout from '../../components/Header/Header';
 
