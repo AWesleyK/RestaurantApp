@@ -83,22 +83,7 @@ const handleImageUpload = (e) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-  
-    // Remove these lines since they're not needed:
-    // const formData = {
-    //   menu: menuType,
-    //   name: itemName,
-    //   price: parseFloat(price),
-    //   detail: detail,
-    //   image: imageUrl,
-    //   isActive: isActive,
-    //   dateAdded: new Date().toISOString(),
-    //   addOns: addOns,
-    //   addOnsPrice: addOnsPrice,
-    //   subtractions: subtractions,
-    // };
-  
-    // Send data to the API route
+
     try {
       const response = await fetch('../api/add-menu-item', {
         method: 'POST',
@@ -110,7 +95,8 @@ const handleImageUpload = (e) => {
   
       if (data.success) {
         alert('Menu item added successfully.');
-        router.push('/'); // Redirect to the home page or any other page if needed
+        router.push('/admin/menu'); // Redirect to the admin menu page
+        router.reload(); // Force a refresh
       } else {
         alert(`Error: ${data.message}`);
       }

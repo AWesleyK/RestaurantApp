@@ -53,22 +53,38 @@ const MenuAdmin = () => {
   };
 
   return (
-    
     <div>
         <div>
-  <h2 className={styles.headers}>Add New Menu Item</h2>
-  <MenuItemForm />
-</div>
-<h2  className={styles.headers}>Edit Existing Menu Items</h2>
-      {menuItems.map((menuItem) =>
+          <h2 className={styles.headers}>Add New Menu Item</h2>
+          <MenuItemForm />
+        </div>
+        <h2  className={styles.headers}>Edit Existing Menu Items</h2>
+        {menuItems.map((menuItem) =>
   menuItem.items.map((item) => (
     <div className={styles.tableRow} key={item._id}>
       <div className={styles.itemContainer}>
-        {Object.entries(item).map(([key, value]) => (
-          <div key={key} className={styles.itemProperty}>
-            {key}: {value.toString()}
-          </div>
-        ))}
+        {Object.entries(item).map(([key, value]) => {
+          let displayValue = "";
+          if (key === "addOns" || key === "subtractions") {
+            if (Array.isArray(value)) {
+              displayValue = value.length ? value.map((val, i) => {
+                if(typeof val === "object") {
+                  return `${Object.entries(val).map(([k, v]) => v && v.length ? `${k}: ${v}` : "").filter(Boolean).join(", ")}`;
+                }
+                return val;
+              }).join(", ") : "";
+            }
+          } else if (key === "addOnsPrice") {
+            displayValue = value.length ? value.join(", ") : "";
+          } else {
+            displayValue = value || "";
+          }
+          return (
+            <div key={key} className={styles.itemProperty}>
+              {key}: {displayValue}
+            </div>
+          );
+        })}
       </div>
       <div className={styles.buttonsContainer}>
         <button onClick={() => handleEdit(item)}>Edit</button>
@@ -77,6 +93,10 @@ const MenuAdmin = () => {
     </div>
   ))
 )}
+
+
+
+
 
 
       {showModal && (
